@@ -1,0 +1,32 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "construction",
+      "database": "construction",
+      "username": "root",
+      "askForPassword": true
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "13.232.246.149",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "aws-ec2",
+      "username": "construction",
+      "database": "construction",
+      "askForPassword": true
+    }
+  ]
+}
