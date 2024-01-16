@@ -19,8 +19,8 @@ const CustomEditor = dynamic(
 const client = new S3Client({
   region: "ap-south-1",
   credentials: {
-    accessKeyId: "AKIASNTMHWBPIEFLT3OT",
-    secretAccessKey: "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",
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
 });
 
@@ -28,7 +28,7 @@ function AddEditionsPage(props) {
   const [date, setDate] = useState([]);
   const [errorMessage, setErrorMessage] = useState({});
   const [description, setdescription] = useState();
-  
+
   const router = useRouter();
 
   const descriptionHandler = (data) => {
@@ -48,8 +48,6 @@ function AddEditionsPage(props) {
       padding: "10px 20px",
     });
   };
-
-  
 
   const yearInputRef = useRef();
   const shortNameInputRef = useRef();
@@ -312,7 +310,6 @@ function AddEditionsPage(props) {
                 ref={metaDescriptionInputRef}
               ></textarea>
             </div>
-            
 
             <button type="submit" className="btn btn-primary !mt-6">
               Submit
@@ -320,7 +317,6 @@ function AddEditionsPage(props) {
           </form>
         </div>
       </div>
-      
     </>
   );
 }

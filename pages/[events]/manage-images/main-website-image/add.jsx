@@ -12,8 +12,8 @@ import Swal from "sweetalert2";
 const client = new S3Client({
   region: "ap-south-1",
   credentials: {
-    accessKeyId: "AKIASNTMHWBPIEFLT3OT",
-    secretAccessKey: "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",
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
 });
 
